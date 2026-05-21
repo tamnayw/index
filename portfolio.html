@@ -18,18 +18,23 @@
        CUSTOMIZE: Edit these variables to personalize your palette
        ════════════════════════════════════════════════════════════ */
     :root {
-      --bg:           #F5F2ED;
-      --ink:          #1C1917;
-      --ink-mid:      #5A554F;
-      --ink-light:    #9A948D;
-      --accent:       #BFA07A;
-      --accent-dark:  #8C6F4E;
-      --card-bg:      #EDE9E2;
-      --border:       #DDD8CF;
-      --border-light: #E8E4DC;
-
-      --font-display: 'Cormorant Garamond', Georgia, serif;
-      --font-body:    'Jost', 'Helvetica Neue', Arial, sans-serif;
+     
+    --bg:           #0D1117;
+    --surface:      #161B22;
+    --card-bg:      #1C2128;
+    --ink:          #E6EDF3;
+    --ink-mid:      #c5d6ec;
+    --ink-light:    #bbcfea;
+    --accent:       #00D9FF;
+    --accent-dark:  #0095B6;
+    --success:      #3FB950;
+    --warning:      #D29922;
+    --border:       #30363D;
+    --border-light: #21262D;
+    --grid-line:    rgba(0, 217, 255, 0.08);
+    --glow:         rgba(0, 217, 255, 0.18);
+    --font-display: 'Space Grotesk', sans-serif;
+    --font-body:    'Inter', 'Helvetica Neue', sans-serif;
 
       --ease: cubic-bezier(0.25, 0, 0.1, 1);
     }
@@ -68,8 +73,8 @@
       border-bottom: 1px solid transparent;
     }
     nav.scrolled {
-      background: rgba(245, 242, 237, 0.88);
-      backdrop-filter: blur(14px);
+      background: rgba(9, 41, 71, 0.88);
+      backdrop-filter: blur(5px);
       -webkit-backdrop-filter: blur(14px);
       border-bottom-color: var(--border-light);
     }
@@ -215,7 +220,21 @@
       gap: 5rem;
       align-items: start;
     }
-    .about-sidebar{}
+    .about-sidebar {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1.5rem;
+
+      min-width: 240px;
+      padding-right: 3rem;
+
+      border-right: 1px solid var(--border);
+
+      position: sticky;
+      top: 6rem;
+      height: fit-content;
+    }
     .about-index {
       font-family: var(--font-display);
       font-size: 7rem;
@@ -280,7 +299,16 @@
     .about-cta:hover svg { transform: translateX(4px); }
 
     /* ── Work ────────────────────────────── */
-    #work {}
+    #work::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at top left,
+        rgba(255,255,255,0.03),
+        transparent 40%);
+      pointer-events: none;
+    }
     .work-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -494,7 +522,7 @@
   <nav id="nav">
 
     <!-- CUSTOMIZE: Replace with your name -->
-    <a href="#hero" class="nav-brand">Your Name</a>
+    <a href="#hero" class="nav-brand">Tanmay W.</a>
 
     <ul class="nav-links">
       <li><a href="#about">About</a></li>
@@ -502,7 +530,7 @@
       <li><a href="#contact">Contact</a></li>
 
       <!-- CUSTOMIZE: Replace with your GitHub URL -->
-      <li><a href="https://github.com/yourusername" target="_blank" rel="noopener">GitHub ↗</a></li>
+      <li><a href="https://github.com/tamnayw" target="_blank" rel="noopener">GitHub ↗</a></li>
     </ul>
   </nav>
 
@@ -514,13 +542,11 @@
     <div class="hero-left">
 
       <!-- CUSTOMIZE: Replace with your role or tagline label -->
-      <p class="hero-eyebrow">Creative &amp; Design Portfolio</p>
+      <p class="hero-eyebrow">An Electronics Engineer's Technical Portfolio</p>
 
       <!-- CUSTOMIZE: Replace with your name — wrap one word in <em> for italic accent -->
       <h1 class="hero-name">
-        Your<br />
-        <em>Name</em><br />
-        Here
+        Tanmay W.
       </h1>
 
       <!-- CUSTOMIZE: Replace with your tagline -->
@@ -532,12 +558,9 @@
     <div class="hero-right">
 
       <!-- CUSTOMIZE: Replace with current year or remove -->
-      <span class="hero-year">Est. 2024</span>
+      <span class="hero-year">Est. 2026</span>
 
-      <div class="hero-scroll-hint">
-        <span class="scroll-bar"></span>
-        Scroll
-      </div>
+     
     </div>
     <div class="hero-rule"></div>
   </section>
@@ -554,11 +577,11 @@
         <div class="disciplines">
 
           <!-- CUSTOMIZE: Replace with your own disciplines / skills -->
-          <span class="discipline">UI &amp; UX Design</span>
-          <span class="discipline">Brand Identity</span>
-          <span class="discipline">Motion Design</span>
-          <span class="discipline">Typography</span>
-          <span class="discipline">Visual Storytelling</span>
+          <span class="discipline">Electronics Design</span>
+          <span class="discipline">Printed Circuit Board Design</span>
+          <span class="discipline">Embedded Systems</span>
+          <span class="discipline">3D CAD and ECAD</span>
+          <span class="discipline">Visual Editing</span>
 
         </div>
       </div>
@@ -567,18 +590,22 @@
         <!-- CUSTOMIZE: Replace with your own heading and bio -->
         <h2 class="about-heading">
           Designing work that<br />
-          <em>means something</em>
+          <em>Electrifies lives.</em>
         </h2>
+         <h3 class="about- sub heading">
+          Where <em>Circuitry </em> and <br />
+          <em>Creativity</em> colide.
+        </h3>
         <p class="about-body">
-          I'm a designer who believes good work is quiet, purposeful, and lasting.
-          My practice spans brand systems, digital interfaces, and visual communication —
-          always rooted in careful research and an obsession with craft.
+          Most engineers see circuits as a tangle of wires and components. I see them as a canvas for creativity, a playground for problem-solving, and tinkering. 
+          My work is driven by a passion for crafting functional and elegant solutions that seamlessly blend form and function, bringing ideas to life through the art of electronics design. 
+          With attention to details and a commitment to excellence, I strive to create designs that not only meet technical requirements but also inspire and delight.
           <br /><br />
-          When I'm not designing, I'm usually reading, sketching, or hunting for the best coffee in the city.
+          When I'm not designing, I'm usually reading, sketching, or crafting something that quenches my hunger for curiosity and creativity.
         </p>
 
         <!-- CUSTOMIZE: Replace href with your GitHub or resume URL -->
-        <a class="about-cta" href="https://github.com/yourusername" target="_blank" rel="noopener">
+        <a class="about-cta" href="https://github.com/tanmayw" target="_blank" rel="noopener">
           View GitHub
           <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.5">
             <path d="M2 7h10M7 2l5 5-5 5" />
