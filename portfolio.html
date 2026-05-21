@@ -25,12 +25,12 @@
     --ink:          #E6EDF3;
     --ink-mid:      #c5d6ec;
     --ink-light:    #bbcfea;
-    --accent:       #00D9FF;
+    --accent:       #0b84cf;
     --accent-dark:  #0095B6;
     --success:      #3FB950;
     --warning:      #D29922;
-    --border:       #30363D;
-    --border-light: #21262D;
+    --border:       #233c59;
+    --border-light: #133454;
     --grid-line:    rgba(0, 217, 255, 0.08);
     --glow:         rgba(0, 217, 255, 0.18);
     --font-display: 'Space Grotesk', sans-serif;
@@ -51,7 +51,7 @@
       line-height: 1.65;
       overflow-x: hidden;
     }
-
+    
     /* ── Utility ─────────────────────────── */
     .reveal {
       opacity: 0;
@@ -64,7 +64,7 @@
     nav {
       position: fixed;
       inset: 0 0 auto 0;
-      z-index: 50;
+      z-index: 501;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -73,7 +73,7 @@
       border-bottom: 1px solid transparent;
     }
     nav.scrolled {
-      background: rgba(9, 41, 71, 0.88);
+      background: rgba(6, 19, 30, 0.88);
       backdrop-filter: blur(5px);
       -webkit-backdrop-filter: blur(14px);
       border-bottom-color: var(--border-light);
@@ -493,7 +493,13 @@
     @media (max-width: 900px) {
       nav { padding: 1.4rem 2rem; }
       .nav-links { gap: 1.8rem; }
-
+      .about-sidebar {
+        position: static;  /* overrides the sticky */
+        border-right: none;
+        border-bottom: 1px solid var(--border);
+        padding-right: 0;
+        padding-bottom: 2rem;
+      }
       #hero { grid-template-columns: 1fr; padding: 0 2rem 4rem; }
       .hero-left { padding-top: 10rem; }
       .hero-right { display: none; }
@@ -522,7 +528,9 @@
   <nav id="nav">
 
     <!-- CUSTOMIZE: Replace with your name -->
-    <a href="#hero" class="nav-brand">Tanmay W.</a>
+    <a href="#hero" class="nav-brand" style="display:flex; align-items:center; gap:0.5rem;">
+      <span style="color:var(--accent); font-size:1.3rem;">⬡</span> Tanmay W.
+    </a>
 
     <ul class="nav-links">
       <li><a href="#about">About</a></li>
