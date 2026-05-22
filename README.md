@@ -1,20 +1,20 @@
 # ✦ Personal Portfolio
 
-A clean, editorial-style personal portfolio website — built with vanilla HTML, CSS, and JavaScript. No frameworks, no build tools, no dependencies. Just one file.
+A clean, editorial style personal portfolio website,  built with vanilla HTML, CSS, and JavaScript. No frameworks, no build tools, no dependencies. Just one file.
 
 ---
 
 ## Preview
 
-> Live at: [yourusername.github.io](https://yourusername.github.io)
+> Live at: [tamnayw.github.io](https://tamnayw.github.io)
 
 ---
 
 ## Features
 
 - **GitHub API integration** — repos load automatically from your profile
-- **Editorial design** — Cormorant Garamond + Jost typography, warm minimal palette
-- **Electronic background** — static bitstream / circuit grid aesthetic
+- **Editorial design** — Cormorant Garamond + Jost typography, cool minimal palette
+- **Electronic background** — Dot grid aesthetic
 - **Scroll animations** — lightweight IntersectionObserver reveals
 - **Frosted glass nav** — activates on scroll
 - **Fully responsive** — mobile-first breakpoints
@@ -24,12 +24,12 @@ A clean, editorial-style personal portfolio website — built with vanilla HTML,
 
 ## Getting Started
 
-No install needed. Just open `index.html` in a browser.
+No install needed. Just open `portfolio.html` in a browser.
 
 ```bash
-git clone https://github.com/yourusername/yourusername.github.io.git
-cd yourusername.github.io
-open index.html
+git clone https://github.com/tamnayw/tamnayw.github.io.git
+cd tamnayw.github.io
+open portfolio.html
 ```
 
 ---
@@ -55,9 +55,9 @@ All editable sections are marked with `CUSTOMIZE` comments inside the file.
 
 Hosted on **GitHub Pages** — free, automatic, no config needed.
 
-1. Push to a repo named `yourusername.github.io`
+1. Push to a repo named `tamnayw.github.io`
 2. Go to **Settings → Pages → Source → main branch**
-3. Live in ~60 seconds at `https://yourusername.github.io`
+3. Live in ~60 seconds at `https://tamnayw.github.io`
 
 To update the site:
 
@@ -91,6 +91,4 @@ Or use the **VS Code Source Control** tab — stage, commit, sync in a few click
 
 ---
 
-## License
 
-MIT — use it, fork it, make it yours.
